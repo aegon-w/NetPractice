@@ -1,18 +1,162 @@
-**Encapsulation && Decapsulation animation :  https://www.youtube.com/watch?v=FJIFfkpUO7o
+-----------------------------------------```resources```--------------------------------------------------
 
-**Networking tutorial : https://www.tutorialspoint.com/data_communication_computer_network
+**Networking tutorial** : https://www.tutorialspoint.com/data_communication_computer_network
 
-**What is standar in networking : Network standards are agreed-upon specifications that ensure compatibility and interoperability among different devices, vendors, and applications on a network. They define the physical, electrical, and functional characteristics of network components, such as cables, connectors, signals, frequencies, and protocols.
+**Encapsulation && Decapsulation animation** :  https://www.youtube.com/watch?v=FJIFfkpUO7o
 
-**the main difference between OSI && TCP/IP model :  TCP/IP is a practical model that addresses specific communication challenges and relies on standardized protocols. In contrast, OSI serves as a comprehensive, protocol-independent framework designed to encompass various network communication methods.
+**Difference Between IP And MAC Addresses** : https://www.comms-express.com/blog/what-is-the-difference-between-ip-and-mac-addresses/
 
-***Layers***
+**Subnitting Calculation** - (English version) : 1. https://www.youtube.com/watch?v=UHRPtNZ_Rz4
+												 
 
-**Physical layer : 
--in the OSI model plays the role of interacting with actual hardware and signaling mechanism.
--is the lowest layer of the TCP/IP model. It deals with data in the form of bits. This layer mainly handles the host to host communication in the network. It defines the transmission medium and mode of communication between two devices.
+			   - (Frensh version) : 1. https://www.youtube.com/watch?v=S_EfcLo2Wv0
+						2. https://www.youtube.com/watch?v=RnpSaDSSjR4
+----------------------------------------------------------------------------------------------------------
+
+-----------------------------------------```Other questions```----------------------------------------------
+
+**What is standar in networking** : Network standards are agreed-upon specifications that ensure compatibility and interoperability among different devices, vendors, and applications on a network. They define the physical, electrical, and functional characteristics of network components, such as cables, connectors, signals, frequencies, and protocols.
+
+**the main difference between OSI && TCP/IP model** :  TCP/IP is a practical model that addresses specific communication challenges and relies on standardized protocols. In contrast, OSI serves as a comprehensive, protocol-independent framework designed to encompass various network communication methods.
+
+**Why we use subnitting** : Subnetting gives network administrators better control over their computer networks, including traffic, data packets, subnets, and routers. It boosts the network's overall performance, enhances its security, and ensures that IP addresses are used efficiently.
+
+----------------------------------------------------------------------------------------------------------
+
+------------------------------------------```Layers```----------------------------------------------------
+
+--------------> **Physical layer**
+	-in the OSI model plays the role of interacting with actual hardware and signaling mechanism.
+	-is the lowest layer of the TCP/IP model. It deals with data in the form of bits. This layer mainly handles the host to host communication in the network. It defines the transmission medium and mode of communication between two devices.
 
 
-**When data is sent over physical medium, it needs to be first converted into electromagnetic signals.
+**Signals**:
+When data is sent over physical medium, it needs to be first converted into electromagnetic signals.
 	-digital signal : Digital signals are discrete in nature and represent sequence of voltage pulses. Digital signals are used within the circuitry of a computer system.
 	-analog signal : Analog signals are in continuous wave form in nature and represented by continuous electromagnetic waves.
+
+**Multiplexing** :
+	- Multiplexing is a technique by which different analog and digital streams of transmission can be simultaneously processed over a shared link.
+	- Multiplexing divides the high capacity medium into low capacity logical medium which is then shared by different streams.
+	-> ype of multiplexing :
+		- Frequency Division Multiplexing. (analog technologie)
+		- Time Division Multiplexing. (digital signals but can be applied on analog signals as well)
+		- Wavelength Division Multiplexing. (analog multiplexing technique)
+		- Code Division Multiplexing.
+
+**Switch** :
+	is networking hardware that connects devices on a computer network by using packet switching to receive and forward data to the destination device.
+
+***Switching*** :
+	- Switching is process to forward packets coming in from one port to a port leading towards the destination.
+	-> switching can be divided into two major categories:
+		-Connectionless: The data is forwarded on behalf of forwarding tables. No previous handshaking is required and acknowledgements are optional.
+
+        - Connection Oriented:  Before switching data to be forwarded to destination, there is a need to pre-establish circuit along the path between both endpoints. Data is then forwarded on that circuit. After the transfer is completed, circuits can be kept for future use or can be turned down immediately.
+
+--------------> **Data link layer** 
+	Data Link Layer is second layer of OSI Layered Model. This layer is one of the most complicated layers and has complex functionalities and liabilities. Data link layer hides the details of underlying hardware and represents itself to upper layer as the medium to communicate.
+
+	-> Data link layer has two sub-layers:
+    
+		-Logical Link Control: It deals with protocols, flow-control, and error control
+
+    	-Media Access Control: It deals with actual control of media
+
+***Functionality of Data-link Layer*** :
+	- Framing : Data-link layer takes packets from Network Layer and encapsulates them into Frames.Then, it sends each frame bit-by-bit on the hardware. At receiver’ end, data link layer picks up signals from hardware and assembles them into frames.
+
+	- Addressing : Data-link layer provides layer-2 hardware addressing mechanism. Hardware address is assumed to be unique on the link. It is encoded into hardware at the time of manufacturing.
+
+	- Error Control : Sometimes signals may have encountered problem in transition and the bits are flipped.These errors are detected and attempted to recover actual data bits. It also provides error reporting mechanism to the sender.
+
+	- Flow Control : Stations on same link may have different speed or capacity. Data-link layer ensures flow control that enables both machine to exchange data on same speed.
+
+	- Multi-Access : When host on the shared link tries to transfer the data, it has a high probability of collision. Data-link layer provides mechanism such as CSMA/CD to equip capability of accessing a shared media among multiple Systems.
+
+
+--------------> **Network/ Internet layer**
+	- Network layer manages options pertaining to host and network addressing, managing sub-networks, and internetworking.
+	- Network layer takes the responsibility for routing packets from source to destination within or outside a subnet.
+
+***Network layer Functionalities***
+		- Addressing devices and networks.
+		- Populating routing tables or static routes.
+		- Queuing incoming and outgoing data and then forwarding them according to quality of service constraints set for those packets.
+		- Internetworking between two different subnets.
+		- Delivering packets to destination with best efforts.
+		- Provides connection oriented and connection less mechanism.
+
+***Network Layer Features***
+		- Quality of service management
+		- Load balancing and link management
+		- Security
+		- Interrelation of different protocols and subnets with different schema.
+		- Different logical network design over the physical network design.
+		- L3 VPN and tunnels can be used to provide end to end dedicated connectivity.
+	
+***Network addressing*** : network addressing is one of the major tasks of Network Layer.
+		Network Addresses are always logical i.e. these are software based addresses which can be changed by appropriate configurations.
+	
+		- Network address can be of one of the following:
+			- Unicast (destined to one host)
+			- Multicast (destined to group)
+			- Broadcast (destined to all)
+			- Anycast (destined to nearest one)
+
+***Routing*** :
+		When a device has multiple paths to reach a destination, it always selects one path by preferring it over others. This selection process is termed as Routing.
+
+		route can make decision based on the following information :
+			- Hop count.
+			- Bandwidth.
+			- Metric.
+			- Prefix-length.
+			- Delay
+
+***Routing table*** : 
+		- information : Method to reach the network
+			1. Network ID:
+				The network ID or destination corresponding to the route.
+			2. Subnet Mask:
+				The mask that is used to match a destination IP address to the network ID.
+			3. Next Hop:
+				The IP address to which the packet is forwarded
+			4. Outgoing Interface:
+				Outgoing interface the packet should go out to reach the destination network.
+			5. Metric:
+				A common use of the metric is to indicate the minimum number of hops (routers crossed) to the network ID.
+
+		- Routing table entries can be used to store the following types of routes:
+			1. Directly Attached Network IDs
+			2. Remote Network IDs
+			3. Host Routes
+			4. Default Route
+			5. Destination
+
+-> Unicast routing : Most of the traffic on the internet and intranets known as unicast data or unicast traffic is sent with specified destination.
+-> Broadcast routing : the broadcast packets are not routed and forwarded by the routers on any network. Routers create broadcast domains. But it can be configured to forward broadcasts in some special cases. A broadcast message is destined to all network devices.
+-> Multicast Routing : Multicast routing is special case of broadcast routing with significance difference and challenges. In broadcast routing, packets are sent to all nodes even if they do not want it. But in Multicast routing, the data is sent to only nodes which wants to receive the packets.
+-> Anycast Routing : Anycast packet forwarding is a mechanism where multiple hosts can have same logical address. When a packet destined to this logical address is received, it is sent to the host which is nearest in routing topology.
+
+**internetworking**
+	internetworking is the routing betweem two networks.
+
+**Network Layer Protocols**
+	Every computer in a network has an IP address by which it can be uniquely identified and addressed. An IP address is Layer-3 (Network Layer) logical address. This address may change every time a computer restarts. A computer can have one IP at one instance of time and another IP at some different time.
+
+	-> Address Resolution Protocol(ARP) : is a protocol or procedure that connects an ever-changing Internet Protocol (IP) address to a fixed physical machine address, also known as a media access control (MAC) address, in a local-area network (LAN).
+	-> Internet Control Message Protocol (ICMP) : ICMP is network diagnostic and error reporting protocol. ICMP belongs to IP protocol suite and uses IP as carrier protocol. After constructing ICMP packet, it is encapsulated in IP packet. Because IP itself is a best-effort non-reliable protocol, so is ICMP.
+	-> Internet Protocol Version 4 (IPv4) : IPv4 is 32-bit addressing scheme used as TCP/IP host addressing mechanism. IP addressing enables every host on the TCP/IP network to be uniquely identifiable.
+		- IPv4 provides hierarchical addressing scheme which enables it to divide the network into sub-networks, each with well-defined number of hosts. IP addresses are divided into many categories:
+			1. Class A  - it uses first octet for network addresses and last three octets for host addressing
+			2. Class B  - it uses first two octets for network addresses and last two for host addressing
+			3. Class C  - it uses first three octets for network addresses and last one for host addressing
+			4. Class D  - it provides flat IP addressing scheme in contrast to hierarchical structure for above three.
+			5. Class E  - It is used as experimental.
+	-> nternet Protocol Version 6 (IPv6) :
+	Exhaustion of IPv4 addresses gave birth to a next generation Internet Protocol version 6. IPv6 addresses its nodes with 128-bit wide address providing plenty of address space for future to be used on entire planet or beyond.
+
+**Subnitting**
+	Subnetting is a method of dividing a single physical network into logical sub-networks (subnets).
+	- how it works : watch the (Subnitting Calculation video in `resources`).
