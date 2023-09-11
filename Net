@@ -1,0 +1,18 @@
+**Encapsulation && Decapsulation animation :  https://www.youtube.com/watch?v=FJIFfkpUO7o
+
+**Networking tutorial : https://www.tutorialspoint.com/data_communication_computer_network
+
+**What is standar in networking : Network standards are agreed-upon specifications that ensure compatibility and interoperability among different devices, vendors, and applications on a network. They define the physical, electrical, and functional characteristics of network components, such as cables, connectors, signals, frequencies, and protocols.
+
+**the main difference between OSI && TCP/IP model :  TCP/IP is a practical model that addresses specific communication challenges and relies on standardized protocols. In contrast, OSI serves as a comprehensive, protocol-independent framework designed to encompass various network communication methods.
+
+***Layers***
+
+**Physical layer : 
+-in the OSI model plays the role of interacting with actual hardware and signaling mechanism.
+-is the lowest layer of the TCP/IP model. It deals with data in the form of bits. This layer mainly handles the host to host communication in the network. It defines the transmission medium and mode of communication between two devices.
+
+
+**When data is sent over physical medium, it needs to be first converted into electromagnetic signals.
+	-digital signal : Digital signals are discrete in nature and represent sequence of voltage pulses. Digital signals are used within the circuitry of a computer system.
+	-analog signal : Analog signals are in continuous wave form in nature and represented by continuous electromagnetic waves.
